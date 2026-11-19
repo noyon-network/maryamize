@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maryam Matoaka — Creative Writer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)})()</script>
+<style>
+:root{--bg:#fff;--fg:#0a0a0a;--mut:#666;--line:#e2e2e2;color-scheme:light;--pill:#e0e4de;--box:#f0f0f0;--red:#ee3524;--ab:#000;--serif:'Instrument Serif','Amiri',Georgia,serif;--sans:'Inter Tight',Helvetica,Arial,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*,::before,::after{box-sizing:inherit;margin:0}
+body{background:var(--bg);color:var(--fg);font:400 16px/1.5 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--red);color:#fff}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;display:flex;justify-content:space-between;padding:20px max(6vw,calc((100% - 1200px)/2));background:color-mix(in srgb,var(--bg) 86%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);font:500 clamp(14px,3.8vw,17px) var(--mono);text-transform:uppercase}
+.nav nav{display:flex;gap:clamp(14px,4vw,28px)}
+.nav a:hover{color:var(--red)}
+.wrap{width:min(1200px,100% - 12vw);margin-inline:auto}
+.s{padding-top:clamp(80px,14vw,150px)}
+/* hero */
+.hero{text-align:center;padding-top:clamp(40px,9vw,110px)}
+h1{font:400 clamp(72px,25vw,290px)/.9 var(--serif);letter-spacing:.01em}
+h1 .l{display:block;overflow:hidden;padding-bottom:.04em}
+h1 .l span{display:inline-block;animation:up 1.2s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*70ms + 150ms)}
+@keyframes up{from{transform:translateY(105%) rotate(7deg)}}
+.caret{width:2px;height:clamp(70px,16vw,120px);background:var(--fg);margin:clamp(28px,6vw,60px) auto;transform-origin:top;animation:draw 1s .9s cubic-bezier(.2,.8,.2,1) both,blink 1.1s 1.9s steps(1) infinite}
+@keyframes draw{from{transform:scaleY(0)}}
+@keyframes blink{50%{opacity:0}}
+.lede{font:500 clamp(26px,6.4vw,46px)/1.1 var(--sans);letter-spacing:-.035em;max-width:16em;margin:0 auto}
+.status,.now{font:500 clamp(12px,3.3vw,15px) var(--mono);text-transform:uppercase;color:var(--mut)}
+.status{display:flex;gap:2em;justify-content:center;flex-wrap:wrap;margin:36px 0 14px}
+.status a{color:var(--red)}
+.now{margin-bottom:56px;min-height:1.5em}
+#tw::after{content:"";display:inline-block;width:.55em;height:1em;background:var(--red);margin-left:4px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+canvas.band{display:block;width:100%;height:clamp(150px,30vw,270px)}
+/* section heads */
+.sh{display:flex;align-items:center;gap:16px;font:500 clamp(14px,3.8vw,17px) var(--mono);text-transform:uppercase;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.sh i{width:15px;height:15px;background:var(--red)}
+.sh em{margin-left:auto;font-style:normal;color:var(--mut)}
+/* work */
+.track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:36px max(6vw,calc((100vw - 1200px)/2)) 20px;scroll-padding-inline:6vw;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(86vw,470px);scroll-snap-align:start}
+.art{aspect-ratio:5/4;overflow:hidden;background:#e6e6e6}
+.art svg{display:block;width:100%;height:100%;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.card h3,.step h3{font:500 clamp(34px,8vw,48px)/1 var(--sans);letter-spacing:-.045em;margin:28px 0 14px}
+.step h3{font-size:clamp(44px,12vw,80px);margin:0 0 18px}
+sup{font:400 .3em var(--mono);color:var(--mut);letter-spacing:0;margin-left:.9em;vertical-align:top;position:relative;top:.4em}
+.card p,.step p{color:var(--mut);font-size:clamp(19px,4.6vw,24px);line-height:1.35;letter-spacing:-.025em;max-width:17em}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.tags b{font:400 13px var(--mono);text-transform:uppercase;background:var(--pill);color:var(--mut);padding:9px 16px;border-radius:99px}
+.rg circle{animation:br 5s ease-in-out infinite;animation-delay:calc(var(--k)*-.45s);transform-box:fill-box;transform-origin:center}
+@keyframes br{50%{transform:scale(1.07)}}
+.rd rect{transform-box:fill-box;transform-origin:left;animation:rd 5s ease-in-out infinite;animation-delay:calc(var(--k)*-.4s)}
+@keyframes rd{50%{transform:scaleX(.5)}}
+.qm{font:400 440px var(--serif);animation:fl 7s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-14px)}}
+.lt{transform-origin:250px 200px;transform:rotate(var(--r));animation:sh 6s ease-in-out infinite}
+@keyframes sh{50%{transform:rotate(calc(var(--r) + 5deg))}}
+/* about */
+.about{background:var(--ab);color:#d9dcd6;margin-top:clamp(80px,14vw,150px);padding:clamp(80px,14vw,130px) 0 clamp(80px,12vw,130px);--rc:#fff;--rl:#2c2c2c}
+.about .sh{border-color:#2c2c2c;color:#fff}.about .sh em{color:#888}
+.big{font:400 clamp(24px,5.6vw,40px)/1.28 var(--sans);letter-spacing:-.03em;max-width:23em;margin-top:56px}
+.big+.big{margin-top:36px}
+del{text-decoration:none;position:relative;color:#85857f}
+del::after{content:"";position:absolute;left:-2px;right:-2px;top:54%;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .8s .5s}
+ins{text-decoration:none;font:italic 1.14em var(--serif);color:#fff;opacity:0;transition:opacity .7s 1.2s}
+.in del::after{transform:scaleX(1)}.in ins{opacity:1}
+h3.sv{font:500 clamp(30px,7vw,44px) var(--sans);letter-spacing:-.04em;margin:clamp(70px,12vw,110px) 0 24px;color:#fff}
+.rows>div{display:flex;justify-content:space-between;padding:22px 0;border-top:1px solid var(--rl,var(--line));font:500 clamp(15px,4vw,19px) var(--mono);text-transform:uppercase;color:var(--rc,var(--fg));transition:padding .35s,color .35s}
+.rows>div:last-child{border-bottom:1px solid var(--rl,var(--line))}
+.rows>div:hover{padding-left:14px;color:var(--red)}
+.sw{overflow:hidden;margin-top:clamp(70px,12vw,110px)}
+.strip{display:flex;gap:24px;width:max-content;padding:0 6vw 90px;will-change:transform}
+.t{flex:0 0 min(62vw,400px);aspect-ratio:3/4;padding:26px;display:flex;flex-direction:column;justify-content:space-between;font:400 11px var(--mono);text-transform:uppercase}
+.t q{font:italic 400 clamp(30px,8vw,40px)/1.05 var(--serif);text-transform:none;quotes:"“" "”"}
+.t:nth-child(2){margin-top:90px;background:var(--red);color:#000}.t:nth-child(2) u{font:400 min(60vw,380px)/.8 var(--serif);text-decoration:none;align-self:center}
+.t:nth-child(1){background:#1d1d1d;color:#999}.t:nth-child(1) q{color:#fff}
+.t:nth-child(3){margin-top:40px;background:#ececec repeating-linear-gradient(transparent 0 33px,#cfcfcf 33px 34px);color:#222}
+.t:nth-child(3) q::after{content:"";display:inline-block;width:2px;height:.9em;background:var(--red);margin-left:4px;animation:blink 1s steps(1) infinite}
+/* process, words, experience, contact */
+.steps{position:relative;margin-top:10px}
+.steps::before,.steps::after{content:"";position:absolute;left:0;top:0;width:2px}
+.steps::before{bottom:0;background:var(--line)}
+.steps::after{height:calc(var(--p,0)*100%);background:var(--red)}
+.step{padding:clamp(44px,8vw,70px) 0 clamp(44px,8vw,70px) 30px;border-bottom:1px solid var(--line)}
+.step:last-child{border:0}
+.qs{display:grid;margin-top:56px}
+.qs blockquote{grid-area:1/1;opacity:0;transform:translateY(16px);transition:opacity .9s,transform .9s}
+.qs .on{opacity:1;transform:none}
+.qs q{display:block;font:italic 400 clamp(32px,8vw,68px)/1.04 var(--serif);letter-spacing:-.01em;quotes:"“" "”"}
+.qs cite{display:block;margin-top:26px;font:500 14px var(--mono);text-transform:uppercase;font-style:normal;color:var(--mut)}
+.ex{display:flex;gap:clamp(18px,5vw,36px);align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+.ex .m{flex:none;width:clamp(56px,14vw,108px);aspect-ratio:1;display:grid;place-items:center;font:400 clamp(30px,8vw,58px) var(--serif);transition:transform .4s}
+.ex:hover .m{transform:rotate(-8deg) scale(1.05)}
+.ex b{display:block;font:500 clamp(17px,4.6vw,23px) var(--mono);text-transform:uppercase;margin-bottom:8px}
+.ex span{display:block;font:400 clamp(14px,3.8vw,19px)/1.5 var(--mono);text-transform:uppercase;color:var(--mut)}
+.mail{display:block;margin-top:56px;padding:clamp(26px,6vw,40px) 12px;background:var(--box);text-align:center;font:400 clamp(21px,8.2vw,84px)/1 var(--serif);text-transform:uppercase;overflow-wrap:anywhere}
+.mail span{display:inline-block;transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.mail:hover span{transform:translateY(-.16em);color:var(--red)}
+.cp{font-size:clamp(20px,5vw,26px);line-height:1.35;letter-spacing:-.025em;color:var(--mut);max-width:16em;margin:48px 0 44px}
+.foot{padding:clamp(70px,12vw,120px) 0 80px;font:500 clamp(14px,3.8vw,16px)/2.7 var(--mono);text-transform:uppercase}
+.foot a:hover{color:var(--red)}.foot p{margin-top:20px;color:var(--mut)}
+.sc{color:transparent!important;position:relative}.sc::after{content:attr(data-s);position:absolute;inset:0;text-align:center;color:var(--red)}
+.mq{overflow:hidden;margin-top:clamp(70px,12vw,120px);padding-bottom:clamp(70px,12vw,120px)}
+.mq div{display:flex;width:max-content;white-space:nowrap;font:400 clamp(46px,13vw,130px)/1.1 var(--serif);text-transform:uppercase;will-change:transform}
+.mq span{margin-right:.35em}.mq span:nth-of-type(even){-webkit-text-stroke:1px var(--fg);color:transparent}.mq i{font-style:normal;color:var(--red);margin-right:.35em}
+.pg{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;font:500 12px var(--mono);background:var(--fg);color:var(--bg);padding:8px 13px;border-radius:99px;text-transform:uppercase;pointer-events:none}
+.cap{text-align:center;font:500 12px var(--mono);text-transform:uppercase;color:var(--mut);margin-top:14px}
+.rl{display:flex;gap:16px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+.rl small{flex:none;width:6.2em;font:500 12px var(--mono);text-transform:uppercase;color:var(--mut)}
+.rl b{flex:1;font:400 clamp(26px,7vw,54px)/1.05 var(--serif);min-height:1.1em;unicode-bidi:plaintext;transition:color .2s}
+.rl b.go{color:var(--red)}
+.reels{margin-top:40px;border-top:1px solid var(--line)}
+.spin{margin-top:32px;font:500 14px var(--mono);text-transform:uppercase;background:var(--fg);color:var(--bg);border:0;padding:16px 26px;border-radius:99px;cursor:pointer;transition:background .3s,transform .2s}
+.spin:hover{background:var(--red)}.spin:active{transform:scale(.96)}
+.cv{display:block;width:100%;margin-top:40px}
+.wd{position:fixed;left:14px;bottom:calc(56px + env(safe-area-inset-bottom,0px));z-index:45;max-width:calc(100vw - 28px);font:500 12px var(--mono);background:var(--bg);color:var(--fg);border:1px solid var(--fg);padding:7px 12px;border-radius:99px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none;transition:opacity .35s}
+.vf{position:relative;margin-top:40px;height:clamp(440px,118vw,640px);background:#0a0a0a;color:#e9e9e9;overflow:hidden}
+.vf::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse at center,transparent 50%,rgba(0,0,0,.7))}
+.hud{position:absolute;z-index:4;top:20px;left:48px;right:48px;display:flex;justify-content:space-between;font:500 12px var(--mono);color:#fff}
+.rec{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--red);margin-right:8px;animation:blink 1s steps(1) infinite}
+.k{position:absolute;z-index:4;width:22px;height:22px;border:2px solid #fff;opacity:.85}
+.k1{top:14px;left:14px;border-right:0;border-bottom:0}.k2{top:14px;right:14px;border-left:0;border-bottom:0}.k3{bottom:14px;left:14px;border-right:0;border-top:0}.k4{bottom:14px;right:14px;border-left:0;border-top:0}
+.scr{position:absolute;z-index:1;inset:64px 8% 48px;font:400 clamp(13px,3.7vw,17px)/1.5 var(--mono)}
+.scr p{margin:0 0 .8em;white-space:pre-wrap;unicode-bidi:plaintext}
+.scr .h{font-weight:500;text-transform:uppercase;color:#fff}.scr .n{text-align:center;color:var(--red);margin-bottom:.1em}.scr .d{padding:0 6%;text-align:center}
+.slate{position:absolute;inset:0;z-index:3;display:grid;place-content:center;gap:6px;text-align:center;background:#0a0a0a;color:#fff;font:500 13px var(--mono);transform:translateY(-102%);transition:transform .3s steps(4)}
+.slate.on{transform:none}.slate em{font:400 clamp(90px,28vw,170px)/1 var(--serif);font-style:normal}
+.slate::before{content:"";position:absolute;top:0;left:0;right:0;height:56px;background:repeating-linear-gradient(135deg,#fff 0 16px,#0a0a0a 16px 32px);transform-origin:left top}
+.slate.on::before{animation:cl .32s .4s cubic-bezier(.3,0,.2,1) both}
+@keyframes cl{from{transform:rotate(-15deg)}}
+.tn{height:320vh;margin-top:40px}
+.tk{position:sticky;top:0;height:100vh;height:100svh;background:#000;overflow:hidden}
+.tk canvas{display:block;width:100%;height:100%}
+.tcap{position:absolute;left:0;right:0;bottom:calc(76px + env(safe-area-inset-bottom,0px));text-align:center;font:500 13px var(--mono);text-transform:uppercase;color:#fff}
+.js [data-r]{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.js [data-r].in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important}.js [data-r]{opacity:1;transform:none}}
+/* dark / bright mode */
+:root[data-theme="dark"]{--bg:#0c0c0c;--fg:#f1f1ee;--mut:#9b9b96;--line:#2b2b2b;--pill:#272a26;--box:#1a1a1a;--ab:#1b1b1b;color-scheme:dark}
+#theme{font:inherit;text-transform:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+#theme:hover{color:var(--red)}
+</style>
+</head>
+<body>
+<header class="nav"><a href="#top">Maryam</a><nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><button type="button" id="theme" aria-label="Switch between dark and bright mode">Dark</button></nav></header>
+<main id="top">
+<section class="hero">
+<h1 aria-label="Maryam Matoaka"><span class="l" data-split>MARYAM</span><span class="l" data-split>MATOAKA</span></h1>
+<div class="caret"></div>
+<p class="lede" data-r>Creative writer working with founders &amp; studios on stories, voices, and the words in between.</p>
+<p class="status" data-r><span>Open to new projects</span><a href="mailto:MlilAn711@proton.me">MlilAn711@proton.me</a></p>
+<p class="now" data-r>Now writing: <span id="tw"></span></p>
+</section>
+<canvas class="band" id="c1" aria-hidden="true" style="height:clamp(300px,78vw,540px)"></canvas>
+<p class="cap">Touch the field · Arabic, English & the world’s words for making things</p>
+
+<section class="s" id="work"><div class="wrap"><div class="sh"><i></i>Selected work<em>[01]</em></div></div>
+<div class="track">
+<article class="card"><div class="art"><svg id="a0" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div><h3>The Salt Year<sup>[2026]</sup></h3><p>A debut novel in fragments. One coastal town, four summers, and everything the tide wouldn’t take.</p><div class="tags"><b>Fiction</b><b>Manuscript</b></div></article>
+<article class="card"><div class="art"><svg id="a1" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div><h3>Hollow Hours<sup>[2026]</sup></h3><p>Twelve essays on time, sleep, and the strange rooms of the night. Cut, tightened, and read aloud twice.</p><div class="tags"><b>Essays</b><b>Editing</b></div></article>
+<article class="card"><div class="art"><svg id="a2" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div><h3>CREO<sup>[2025]</sup></h3><p>A brand voice and origin story for a design studio. Warm, plain-spoken, and easy to keep current.</p><div class="tags"><b>Brand voice</b><b>Copywriting</b></div></article>
+<article class="card"><div class="art"><svg id="a3" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div><h3>Letters to Lumen<sup>[2025]</sup></h3><p>A fortnightly letter series for a lighting company. Small stories, one idea at a time, read by thousands.</p><div class="tags"><b>Newsletter</b><b>Storytelling</b></div></article>
+</div>
+<div class="wrap"><a class="spin" href="https://drive.google.com/file/d/1ydghJ-XwI55yA1Fg7Z9keYPtNPzu-K-T/view" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px">See more work →</a></div></section>
+
+<div class="mq" aria-hidden="true"><div id="mq"><span>Es war einmal</span><i>/</i><span>Il était une fois</span><i>/</i><span>Había una vez</span><i>/</i><span>昔々あるところに</span><i>/</i><span>Жили-были</span><i>/</i><span dir="rtl">كان يا ما كان</span><i>/</i><span>एक समय की बात है</span><i>/</i><span>C’era una volta</span><i>/</i><span>Once upon a time</span><i>/</i><span>옛날 옛적에</span><i>/</i><span>Μια φορά κι έναν καιρό</span><i>/</i></div></div>
+<section class="about s" id="about" style="margin-top:0;padding-top:clamp(80px,14vw,130px)"><div class="wrap">
+<div class="sh"><i></i>About<em>[02]</em></div>
+<p class="big" data-r>I’ve spent the last decade writing across fiction and brand. Short stories, essays, brand voices, and the occasional <del>press release</del> <ins>love letter to a product</ins>.</p>
+<p class="big" data-r>I’ve worked in-house and freelance. For first-time authors, early-stage startups and names you’d know. I care most about a simple thing: making words clear, human, and sincere to live with.</p>
+<p class="big" data-r>I’m an expressive, conceptually driven creative writer and concept creator with a refined sense for visual poetry, storytelling, and distinct brand experiences. I specialize in scriptwriting, advertising scenarios, and compelling captions, and I combine high-level multitasking with a sharp eye for aesthetic contrast and emotional impact.</p>
+<h3 class="sv">Services</h3>
+<div class="rows"><div>Fiction &amp; short stories<span>→</span></div><div>Brand storytelling<span>→</span></div><div>Essays &amp; long-form<span>→</span></div><div>Scripts &amp; voiceover<span>→</span></div><div>Concept developer<span>→</span></div></div>
+<h3 class="sv">Clients</h3>
+<div class="rows"><div>CREO</div><!-- hidden for later changes: <div>Lumen</div><div>Kindling</div><div>Vantage</div> --></div>
+</div>
+<div class="sw"><div class="strip" id="strip">
+<div class="t"><span>Opening line 07</span><q>The sea kept our secrets longer than we did.</q></div>
+<div class="t"><span>New paragraph</span><u>¶</u><span>Begin again</span></div>
+<div class="t"><span>Draft 3, margin note</span><q>Cut the first page. Keep the silence.</q></div>
+</div></div></section>
+
+<section class="s" id="exp"><div class="wrap"><div class="sh"><i></i>Experience<em>[03]</em></div>
+<div class="ex" data-r><div class="m" style="background:#efefef;color:#0a0a0a">C</div><div><b>Creative Writer &amp; Concept Creator</b><span>Developing interactive worlds, scenarios, poetic scripts, lyrics and visual concepts with sharp social captions and multi-layered identities<br>Since childhood</span></div></div>
+<div class="ex" data-r><div class="m" style="background:#0a0a0a;color:#fff">F</div><div><b>Family &amp; Project Management (24/7)</b><span>High-stakes organization, conflict resolution, resource management, and execution under pressure<br>2012–Today</span></div></div>
+<div class="ex" data-r><div class="m" style="background:#dfe3dd;color:#0a0a0a">S</div><div><b>Seamstress</b><span>Precision craftsmanship, tactile design work, and material focus<br>2012</span></div></div>
+<div class="ex" data-r><div class="m" style="background:#ee3524;color:#fff">D</div><div><b>Dance &amp; Gymnastics Academy</b><span>Physical expression, spatial awareness, dramatic composition and dance performance presence, alongside nutritional science, anatomy and physiology, and psychology<br>2008–2010</span></div></div>
+<div class="ex" data-r><div class="m" style="background:#efefef;color:#0a0a0a">A</div><div><b>Audio Engineering Studies</b><span>Foundations of sound design, acoustics, and audio dramaturgy<br>2007</span></div></div>
+</div></section>
+
+<section class="s" id="words"><div class="wrap"><div class="sh"><i></i>Kind words<em>[04]</em></div>
+<div class="qs">
+<blockquote><q>Maryam found the sentence we’d been circling for two years.</q><cite>Marwan Al-Zohairy, Filmmaker &amp; Producer, Founder of CREO</cite></blockquote>
+<blockquote><q>She writes the way people actually think. Our readers noticed within a week.</q><cite>Marwan Al-Zohairy, Filmmaker &amp; Producer, Founder of CREO</cite></blockquote>
+<blockquote><q>A rare writer who makes the edit feel like a conversation.</q><cite>Marwan Al-Zohairy, Filmmaker &amp; Producer, Founder of CREO</cite></blockquote>
+</div></div></section>
+
+<section class="s" id="process"><div class="wrap"><div class="sh"><i></i>Process<em>[05]</em></div>
+<div class="steps" id="steps">
+<article class="step" data-r><h3>Listen<sup>[01]</sup></h3><p>Deep-dive into your story, your readers, and your voice. Interviews and a quiet audit of everything you’ve written.</p><div class="tags"><b>Voice audit</b><b>Interviews</b></div></article>
+<article class="step" data-r><h3>Outline<sup>[02]</sup></h3><p>Find the angle. Structure, tone, and a shared brief before a single paragraph exists.</p><div class="tags"><b>Story arc</b><b>Brief</b><b>Tone board</b></div></article>
+<article class="step" data-r><h3>Draft<sup>[03]</sup></h3><p>The messy, honest first pass. Two or three directions, so you can hear which one sounds like you.</p><div class="tags"><b>First draft</b><b>Alternates</b></div></article>
+<article class="step" data-r><h3>Revise<sup>[04]</sup></h3><p>Cut, tighten, read aloud. Then cut again until every line earns its place.</p><div class="tags"><b>Line edit</b><b>Read aloud</b><b>Final copy</b></div></article>
+</div></div></section>
+
+<section class="s" id="lab"><div class="wrap"><div class="sh"><i></i>Idea machine<em>[06]</em></div>
+<div class="reels"><div class="rl"><small>Write</small><b id="r0"></b></div><div class="rl"><small>About</small><b id="r1"></b></div><div class="rl"><small>Seeded by</small><b id="r2"></b></div></div>
+<p class="cp" id="seed" style="margin:18px 0 0"></p><button class="spin" id="spin" type="button">Spin an idea</button></div></section>
+<section class="s" id="brush"><div class="wrap"><div class="sh"><i></i>Letter brush<em>[07]</em></div><canvas class="cv" id="bc" style="height:clamp(280px,80vw,460px);background:var(--box);touch-action:none"></canvas><p class="cp" style="margin:20px 0 0">Draw with your finger. Every stroke spells words for making things.</p></div></section>
+<section class="s" id="film"><div class="wrap"><div class="sh"><i></i>Script to screen<em>[08]</em></div>
+<div class="vf" id="vf"><div class="hud"><span><i class="rec"></i>REC</span><span id="tc">00:00:00:00</span><span id="sc">SC 1</span></div><div class="scr" id="scr"></div><div class="slate" id="slate" aria-hidden="true"><small>SCENE</small><em id="sn">1</em><small id="tk2">TAKE 1</small></div><i class="k k1"></i><i class="k k2"></i><i class="k k3"></i><i class="k k4"></i></div>
+<p class="cp" style="margin:18px 0 0">A screenplay that writes itself, in Arabic and English, then cuts to the next scene.</p></div></section>
+<section class="s" id="tunnel"><div class="wrap"><div class="sh"><i></i>Word tunnel<em>[09]</em></div></div><div class="tn" id="tn"><div class="tk"><canvas id="tc3" aria-hidden="true"></canvas><a class="tcap" id="tcap" href="#contact">Scroll to fly through the words</a></div></div></section>
+<section class="s" id="contact"><div class="wrap"><div class="sh"><i></i>Contact<em>[10]</em></div>
+<a class="mail w" href="mailto:MlilAn711@proton.me" data-r>MlilAn711@proton.me</a>
+<p class="cp">Always up for chatting through a new story. Currently booking projects from January 2027.</p>
+<p class="cp" data-r style="margin:-14px 0 44px">Germany - Turkiye - Saudi Arabia - worldwide</p>
+<div class="rows"><div><a href="https://wa.me/966510850551" target="_blank" rel="noopener noreferrer">WhatsApp / Business +966510850551</a><span>→</span></div><div><a href="https://t.me/maryamatoaka" target="_blank" rel="noopener noreferrer">Telegram @maryamatoaka</a><span>→</span></div><div><a href="https://upscrolled.com/@maryamatoaka" target="_blank" rel="noopener noreferrer">Upscrolled.com/@maryamatoaka</a><span>→</span></div></div>
+</div></section>
+<canvas class="band" id="c2" aria-hidden="true" style="margin-top:clamp(70px,12vw,120px)"></canvas>
+</main>
+<div class="wd" id="wd" aria-hidden="true"></div>
+<div class="pg" id="pg" aria-hidden="true">p. 001</div>
+<footer class="foot wrap"><div>Maryam</div><div><a href="#top">Home</a><br><a href="#work">Work</a><br><a href="#about">About</a><br><a href="#contact">Contact</a></div><p>© 2026 Maryam Matoaka</p></footer>
+
+<script>
+(()=>{
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+let n=0;$$('[data-split]').forEach(e=>{e.innerHTML=[...e.textContent].map(c=>`<span style="--i:${n++}">${c}</span>`).join('')});
+$$('.w').forEach(e=>{e.setAttribute('aria-label',e.textContent);e.innerHTML=[...e.textContent].map((c,i)=>`<span aria-hidden="true" style="transition-delay:${i*20}ms">${c}</span>`).join('')});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.2});
+$$('[data-r]').forEach(e=>io.observe(e));
+/* generative covers */
+let s=7;const rnd=()=>(s=s*16807%2147483647)/2147483647;
+const A=[...Array(10)].map((_,i)=>`<circle cx="250" cy="200" r="${24+i*21}" style="--k:${i}"/>`).join('');
+$('#a0').innerHTML=`<rect width="500" height="400" fill="#dcdce0"/><g class="rg" fill="none" stroke="#0a0a0a" stroke-width="1.3">${A}</g><circle cx="250" cy="200" r="14" fill="#ee3524"/>`;
+$('#a1').innerHTML='<rect width="500" height="400" fill="#efefef"/><g class="rd">'+[...Array(12)].map((_,i)=>`<rect x="60" y="${48+i*27}" width="${130+rnd()*270|0}" height="11" fill="${i==5?'#ee3524':rnd()>.5?'#0a0a0a':'#b8b8b8'}" style="--k:${i}"/>`).join('')+'</g>';
+$('#a2').innerHTML='<defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4a67f"/><stop offset="1" stop-color="#f6dcd2"/></linearGradient></defs><rect width="500" height="400" fill="url(#pg)"/><text class="qm" x="250" y="470" text-anchor="middle" fill="#0a0a0a">“</text><circle cx="388" cy="108" r="22" fill="#ee3524"/>';
+const L=(r,f,d)=>`<g class="lt" style="--r:${r}deg;animation-delay:${d}s"><rect x="155" y="60" width="190" height="270" rx="3" fill="${f}"/><path d="M182 112h136M182 138h136M182 164h104M182 190h136M182 216h84" stroke="#b9b9b9" stroke-width="3"/></g>`;
+$('#a3').innerHTML=`<rect width="500" height="400" fill="#1a1b1f"/>${L(-10,'#d4d4d4',0)}${L(5,'#e6e6e6',-2)}${L(-2,'#f6f6f6',-4)}<g class="lt" style="--r:8deg"><circle cx="338" cy="96" r="30" fill="none" stroke="#ee3524" stroke-width="4" stroke-dasharray="3 6"/><circle cx="338" cy="96" r="19" fill="#ee3524"/></g>`;
+$$('.art').forEach(a=>{const v=a.firstElementChild;a.addEventListener('pointermove',e=>{const r=a.getBoundingClientRect();v.style.transform=`scale(1.1) translate(${-((e.clientX-r.left)/r.width-.5)*20}px,${-((e.clientY-r.top)/r.height-.5)*20}px)`});a.addEventListener('pointerleave',()=>v.style.transform='')});
+/* ink field: living ASCII texture that follows touch / cursor */
+const R=' .,:;‘“!?%&§¶@',F=[];
+function field(cv,ph){
+const x=cv.getContext('2d');let W,H,cw,ch,C,Rw,vis=true,px=-1,py=-1,t=ph;
+const fit=()=>{const d=devicePixelRatio||1,r=cv.getBoundingClientRect(),f=innerWidth<600?12:15;W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;x.setTransform(d,0,0,d,0,0);x.font=`500 ${f}px JetBrains Mono,monospace`;x.textBaseline='top';cw=f*.6;ch=f*1.4;C=Math.ceil(W/cw)+1;Rw=Math.ceil(H/ch);draw()};
+const draw=()=>{x.clearRect(0,0,W,H);x.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--mut').trim()||'#777';
+const gx=px<0?W*(.5+.4*Math.sin(t*.5)):px,gy=py<0?H*(.5+.3*Math.cos(t*.7)):py;
+for(let j=0;j<Rw;j++)for(let i=0;i<C;i++){const dx=(i*cw-gx)/cw,dy=(j*ch-gy)/ch,d2=dx*dx+dy*dy*1.7;
+let v=(Math.sin(i*.09+t)+Math.sin(j*.23-t*.8)+Math.sin((i+j*2)*.05+t*.6)+Math.sin(Math.hypot(i-C/2,(j-Rw/2)*2)*.12-t*1.4)+4)/8+.8*Math.exp(-d2/60)+.2*Math.sin(Math.sqrt(d2)*.9-t*7)*Math.exp(-d2/400);
+v=Math.max(0,Math.min(1,v));const k=v*(R.length-1)|0;if(k){x.globalAlpha=.3+.7*v;x.fillText(R[k],i*cw,j*ch)}}x.globalAlpha=1};
+cv.addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();px=e.clientX-r.left;py=e.clientY-r.top});
+cv.addEventListener('pointerleave',()=>px=py=-1);
+new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
+let last=0;const loop=T=>{requestAnimationFrame(loop);if(!vis||T-last<33)return;last=T;t+=.035;draw()};
+fit();addEventListener('resize',fit);F.push(fit);if(!rm)requestAnimationFrame(loop)}
+field($('#c2'),40);
+document.fonts&&document.fonts.ready.then(()=>F.forEach(f=>f()));
+/* multilingual script field */
+const SC=['abcdefghijklmnopqrstuvwxyzäöüßéñçøåœ','АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЭЮЯ','ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ','ءابتثجحخدذرزسشصضطظعغفقكلمنهوي','अआइईउऊएऐओऔकखगघचछजझटठडढणतथदधनपफबभमयरलवशषसह','กขคงจฉชซญดตถทนบปผฝพฟภมยรลวศษสหอฮ','가나다라마바사아자차카타파하한글말꿈','あいうえおかきくけこさしすせそたちつてとなにぬねの','日月火水木金土山川人心言夢詩語花風','ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄՅՆՇ','აბგდევზთიკლმნოპჟრსტუფქღყშჩცძწჭხჯჰ','ሀለሐመሠረሰሸቀበተኀነአከወዐዘየደገጠጰጸፀፈፐ','অআইঈউঊএঐওঔকখগঘচছজঝটঠডঢণতথদধনপফবভমযরলশষসহ','§¶@%&*?!“”‘’«»¿¡'];
+const WD=[['Geschichte','story · Deutsch'],['история','story · Русский'],['物語','story · 日本語'],['قصة','story · العربية'],['कहानी','story · हिन्दी'],['ιστορία','story · Ελληνικά'],['이야기','story · 한국어'],['เรื่องเล่า','story · ไทย'],['պատմություն','story · Հայերեն'],['ამბავი','story · ქართული'],['histoire','story · Français'],['故事','story · 中文'],['hikaye','story · Türkçe'],['hadithi','story · Kiswahili'],['Sehnsucht','longing · Deutsch'],['saudade','missing · Português'],['木漏れ日','sun through leaves · 日本語'],['hiraeth','homesick · Cymraeg'],['ubuntu','I am because we are · isiZulu'],['Fernweh','far-sickness · Deutsch'],['حنين','nostalgia · العربية']];
+const sg=()=>{const s=SC[Math.random()*SC.length|0];return s[Math.random()*s.length|0]};
+SC.push([...'𓀀𓁐𓂀𓃠𓅓𓆣𓇳𓈖𓉐𓊪𓋹𓌳𓍯𓎛𓏏'],[...'𒀭𒀯𒁹𒂗𒄑𒅗𒆠𒈗𒉡𒊕𒌓𒍪'],'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ','ἀἁἐἑἠἡἰἱὀὁὐὑὠὡῥῶῆῖ','ابتثجحخدذرزسشصضطظعغفقكلمنهوي','ءآأإؤئةىپچژگ','abcdefghijklmnopqrstuvwxyzäöüß','ܐܒܓܕܗܘܙܚܛܝܟܠܡܢܣܥܦܨܩܪܫܬ');
+const shuf=a=>{for(let i=a.length;i>1;){const j=Math.random()*i--|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const DK={i:0,next(){if(!this.i)shuf(WD);const w=WD[this.i++];if(this.i>=WD.length)this.i=0;return w},pick(n){return shuf([...WD]).slice(0,n)}};
+const LX={
+'العربية':'إبداع|ibdāʿ: creativity;خيال|khayāl: imagination;فكرة|fikra: idea;خوش فكرة|khōsh fikra: good idea (Gulf);سالفة|sālfa: a tale (Gulf);هرجة|harja: talk (Gulf);نبطي|nabaṭī: Gulf folk poetry;مجلس|majlis: where stories are told;نهّام|nahhām: pearl divers’ storyteller;إلهام|ilhām: inspiration;ابتكار|ibtikār: invention;خلق|khalq: creation;قلم|qalam: pen;حبر|ḥibr: ink;مداد|midād: ink;ورقة|waraqa: paper;ديوان|dīwān: poetry collection;قصيدة|qaṣīda: poem;قافية|qāfiya: rhyme;حلم|ḥulm: dream;رؤية|ruʾya: vision;إعلان|iʿlān: advertisement;شعار|shiʿār: slogan;سيناريو|sīnāriyū: screenplay;كلمة|kalima: word;راوي|rāwī: storyteller;حكواتي|ḥakawātī: storyteller;تخيّل|takhayyal: imagine;أسطورة|usṭūra: legend;كاتب|kātib: writer;حبكة|ḥabka: plot;سرد|sard: narration;بلاغة|balāgha: eloquence;مخيّلة|mukhayyila: imagination',
+'فارسی':'داستان|dāstān: story;آفرینش|āfarīnesh: creation;اندیشه|andīsheh: thought;خیال|khiyāl: imagination;قلم|qalam: pen;نوآوری|nowāvari: innovation',
+'اردو':'تخلیق|takhlīq: creation;کہانی|kahānī: story',
+'Deutsch':'Einfall|a sudden idea;Geistesblitz|flash of genius;Fantasie|imagination;Schöpfung|creation;Dichter|poet;Erzählung|narrative;Werbung|advertising;Drehbuch|screenplay;Kopfkino|cinema in the head;Wortschöpfung|coining a word;Einbildungskraft|power of imagination;Schaffensdrang|urge to create;Märchen|fairy tale;Sprachgefühl|feel for language;Gedankenspiel|thought game;Tagtraum|daydream;Entwurf|draft;Eingebung|inspiration;Erfindung|invention;Gesamtkunstwerk|total work of art',
+'English':'concept|where it starts;spark|the first flicker;draft|never the last;imagine|picture it first;tagline|a brand in a breath;headline|the hook;script|words for voices;plot|what happens next;brainstorm|ideas in a storm;invent|to make new;craft|work with care;storyboard|a story in frames;muse|the one who whispers;narrative|the story told;pitch|the idea, aloud;brief|the starting map;verse|lines that sing;prose|words at ease;scribble|thinking by hand;daydream|ideas at play;big idea|the one that sticks;blank page|an open door;first draft|permission to be bad;what if|where it begins;copy|words that sell;campaign|an idea at scale;hook|why they stay;make-believe|pretending, seriously;wordsmith|one who forges language;sketch|an idea in outline;ideate|to think up;premise|the story’s ground;logline|the story in one line;storytelling|the oldest technology;original|before it was copied;creative writing|worlds made of words',
+'Ancient Egyptian':'ḫpr|to come into being;sẖ3|to write;mdw-nṯr|god’s words: hieroglyphs;ḥk3|creative power;sš|scribe;Ptḥ|Ptah, who made by speaking',
+'Ἑλληνικά (ancient)':'ποίησις|poiēsis: making;μῦθος|mythos: story;φαντασία|phantasia: imagination;εὕρηκα|heúrēka: I found it;τέχνη|technē: craft;δημιουργός|dēmiourgós: maker;ἰδέα|idéa: form;ἔπος|épos: word, tale;μοῦσα|moûsa: the Muse;ἐνθουσιασμός|enthousiasmós: the god within;λόγος|lógos: word',
+'Latina':'inventio|invention;ingenium|native genius;fabula|tale;scribere|to write;creare|to bring forth;imaginatio|imagination;carmen|song, poem;verbum|word;musa|muse;ars|craft;calamus|reed pen;stilus|writing tool',
+'Sumerian':'dub|clay tablet','Akkadian':'šaṭāru|to write',
+'संस्कृत':'कल्पना|kalpanā: imagination;सृजन|sṛjana: creation;कथा|kathā: story;काव्य|kāvya: poetry;प्रतिभा|pratibhā: creative genius;रचना|racanā: composition;लेखन|lekhana: writing;रस|rasa: the flavor of feeling;विचार|vichār: thought',
+'Old Norse':'skáld|poet;rún|secret, rune;orð|word;saga|what is said',
+'Old English':'scop|poet, shaper;wordhord|word-hoard;bōc|book',
+'Cymraeg':'awen|poetic inspiration;dychymyg|imagination',
+'Gaeilge':'scéal|story;samhlaíocht|imagination;file|poet-seer',
+'Türkçe':'hayal|dream, imagination;yaratıcılık|creativity;kalem|pen;fikir|idea',
+'日本語':'創造|sōzō: creation;発想|hassō: an idea;想像|sōzō: imagination;筆|fude: brush;脚本|kyakuhon: script;広告|kōkoku: advertisement;詩|shi: poem;夢|yume: dream;言霊|kotodama: spirit of words;間|ma: the meaningful pause',
+'中文':'创意|chuàngyì: creativity;想象|xiǎngxiàng: imagination;灵感|línggǎn: inspiration;文案|wén’àn: copywriting;剧本|jùběn: screenplay;广告|guǎnggào: advertisement;笔|bǐ: pen;文章|wénzhāng: essay',
+'한국어':'상상|sangsang: imagination;창조|changjo: creation;글쓰기|geulsseugi: writing;영감|yeonggam: inspiration;광고|gwanggo: advertisement;아이디어|aidieo: idea',
+'Русский':'идея|idea;воображение|imagination;творчество|creativity;вдохновение|inspiration;сценарий|script;реклама|advertising;сказка|fairy tale;слово|word',
+'Español':'duende|the spirit of inspiration;ocurrencia|a witty idea;guion|script;relato|tale;musa|muse;inventar|to invent;imaginar|to imagine;cuento|short story',
+'Français':'trouvaille|an inspired find;plume|pen, a writer’s voice;récit|narrative;l’imaginaire|the imagined;mot juste|the exact word;création|creation;scénario|screenplay',
+'Italiano':'fantasia|imagination;ingegno|ingenuity;sceneggiatura|screenplay;scintilla|spark;racconto|tale;invenzione|invention;pubblicità|advertising',
+'Português':'imaginação|imagination;criar|to create;ideia|idea;conto|short story',
+'Kiswahili':'bunifu|creativity;wazo|an idea;kuandika|to write',
+'isiZulu':'ukudala|to create;indaba|a story worth telling',
+'ไทย':'ความคิดสร้างสรรค์|creativity;จินตนาการ|imagination',
+'தமிழ்':'கற்பனை|karpanai: imagination;படைப்பு|paṭaippu: creation;கதை|katai: story',
+'বাংলা':'কল্পনা|kalpanā: imagination;সৃষ্টি|sṛṣṭi: creation;গল্প|golpo: story',
+'Հայերեն':'երևակայություն|imagination;ստեղծագործություն|creativity',
+'ქართული':'შემოქმედება|creativity;ფანტაზია|imagination',
+'Suomi':'mielikuvitus|imagination;tarina|story','Nederlands':'verbeelding|imagination','አማርኛ':'ፈጠራ|feṭera: invention;ታሪክ|tarik: story','Tagalog':'malikhain|creative','Bahasa Indonesia':'imajinasi|imagination;cerita|story','Tiếng Việt':'sáng tạo|to create;ý tưởng|an idea;câu chuyện|a story','ʻŌlelo Hawaiʻi':'moʻolelo|story','Yorùbá':'ìtàn|story'};
+for(const[l,s]of Object.entries(LX))s.split(';').forEach(p=>{const[a,b]=p.split('|');WD.push([a,b+' · '+l])});
+/* hero phrases: Arabic (Saudi, Gulf, classical) and English lead; the rest of WD is the quiet third tier */
+const HPX={
+'Saudi':'الفكرة تبغى لها صبر|an idea needs patience;وش السالفة اللي ما انقالت؟|the tale never told;أبغى فكرة تهز الشارع|an idea that shakes the street;ركّز الكاميرا على اللي يوجّع|focus on what hurts;وش لون صوتك؟|what color is your voice?;ما فيه فكرة غبية، فيه فكرة ما انكتبت|no bad ideas, only unwritten ones;كل سالفة تبغى بطل|every tale needs a hero;الحين نبدأ السالفة|now we begin the tale',
+'Gulf':'الفكرة لؤلؤة تبي لها غوص|an idea is a pearl, it needs a dive;اكتب اللي في قلبك مو اللي يعجبهم|write your heart, not their taste;خلّ الحبر يهرج|let the ink talk;شفت الفكرة قبل لا تنولد|I saw the idea before it was born;الإعلان الزين يحكي سالفة|a good ad tells a tale;لقطة وحدة تكفي تحكي كل شي|one shot says it all;المشهد الأخير يغيّر كل شي|the last scene changes everything;قطع! نعيد المشهد|cut! again from the top;القصيدة نبطية والفكرة جديدة|a Nabati poem, a new idea;الليل مجلس للأفكار|night is a majlis for ideas;كل كلمة تتعب عليها تعيش|a word you sweat over lives;الكاتب يشوف اللي ما يشوفونه|the writer sees the unseen;الإبداع يبي جرأة|creativity wants courage;جرّب وإذا غلطت عيد|try, and if you slip, go again;الحلم ينكتب قبل لا يتصوّر|a dream is written before it is shot;كل مشهد له ريحة|every scene has a scent;هرجة تصير حكاية|a chat becomes a story;خلّها تطلع من قلبك|let it come from the heart',
+'Arabic':'ولادة الفكرة|the birth of an idea;حبر يصنع عوالم|ink that makes worlds;صمت المشهد الأخير|the silence of the last scene;أن تخلق من العدم|to create from nothing;ما لا يقال يكتب|what cannot be said is written;عدسة ترى ما وراء الكلمات|a lens that sees beyond words;شرارة الإبداع|the spark of creation;حكاية تستيقظ في الظلام|a tale that wakes in the dark;فن الإيجاز البليغ|the art of eloquent brevity;شعار يسكن الذاكرة|a slogan that lives in memory;بين السطور تولد الحكاية|between the lines a story is born;الخيال أوسع من الواقع|imagination is wider than reality;لقطة تختصر حياة|a shot that holds a life;إعلان يلمس القلب|an ad that touches the heart;كلمات تضيء العتمة|words that light the dark;فكرة واحدة تغير كل شيء|one idea changes everything;صناعة الدهشة|the making of wonder;عالم يبنى بجملة|a world built from a sentence;اكتب كأن العالم يصغي|write as if the world listens',
+'English':'Make something that didn’t exist|creation;Ideas are born in the dark|imagination;Write it before you’re ready|craft;The blank page is a door|beginnings;Every brand is a story half told|advertising;Cut the scene, keep the silence|filmmaking;One sentence can start a world|writing;Imagine louder|imagination;Where concepts become culture|concept;Say it so it stays|copywriting;Fade in on something unforgettable|screenwriting;Make the invisible visible|vision;Words with a pulse|voice;Let the story find you|storytelling;Concept is courage|ideas;Build a world, then let it breathe|world-building;Rewrite the ordinary|craft;Every frame is a decision|filmmaking;A tagline is a poem with a job|advertising;Give the idea a heartbeat|creation;Silence is also dialogue|screenwriting;Write what you can’t film|scripting;The big idea hides in the small detail|concept;Dream in scenes|filmmaking;Begin where it hurts|honesty;Creativity is courage with a pen|writing;Cut to: the thing no one expected|screenwriting;Make them feel it first|advertising;The story you avoid is the one to write|creative writing;Dare the blank page|beginnings'};
+const HP=[];for(const[l,s]of Object.entries(HPX))s.split(';').forEach(p=>{const[a,b]=p.split('|');HP.push([a,b+' · '+l,true])});
+/* personal notebook lines */
+const NT=[['Life is a bridge','notebook · English',true],['Sown in Watership Down – Nourished by Poetic Justice – Withered to Stardust','notebook · English',true],['oldschool roots - newschool pulse','notebook · English',true],['Creation started with a Pen','notebook · English',true],['what is a pen without intelligence, what is intelligence without a heart?','notebook · English',true],['114 reasons to read الحمد لله','notebook · English',true],['on 7 gallows I balanced on 11 toes, one is my mind to focus on my power','notebook · English',true],['Kutsal Yıldız','notebook · Türkçe',true],['Kaderin satırlarının arasında adımız yazılıyor bitişik','notebook · Türkçe',true],['Ama bırakma özümde izin ver izin hep kalsın','notebook · Türkçe',true],['Yine kavuşabileceğimizin inancıyım ama sen yüreğimi yakan o derin sancısın','notebook · Türkçe',true],['Her an yeniden doğarım kucağında aslen','notebook · Türkçe',true],['Bugün benim doğum günüm, pastamı kessek?','notebook · Türkçe',true],['Geborgenheit ist nicht von dieser Welt','notebook · Deutsch',true]];
+NT.forEach(n=>HP.push(n));
+const mkdeck=a=>({i:0,next(){if(!this.i)shuf(a);const w=a[this.i++];if(this.i>=a.length)this.i=0;return w}});
+const HK=mkdeck(HP),OK=mkdeck(WD);DK.next=()=>Math.random()<.78?HK.next():OK.next();
+if(document.fonts){document.fonts.load('700 40px Amiri','ابت').catch(()=>{});document.fonts.load('400 40px "Instrument Serif"').catch(()=>{})}
+function scripts(cv){
+const x=cv.getContext('2d'),css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+let W,H,f,cw,ch,C,Rw,vis=true,px=-1,py=-1,t=Math.random()*500,B=[],nx=0,wi=0;
+const fit=()=>{const d=devicePixelRatio||1,r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;x.setTransform(d,0,0,d,0,0);f=W<600?13:16;cw=f*1.05;ch=f*1.3;C=Math.ceil(W/cw)+1;Rw=Math.ceil(H/ch)+1;draw()};
+let SL=0;const sp2=t=>{const a=t.split(' ');if(a.length<2||t.length<14)return[t];const k=Math.ceil(a.length/2);return[a.slice(0,k).join(' '),a.slice(k).join(' ')]};
+const bf=(b,s)=>/[\u0600-\u06FF]/.test(b.w[0])?`700 ${Math.round(s*1.12)}px Amiri,Instrument Serif,serif`:`400 ${s}px Instrument Serif,Georgia,serif`;
+const drawB=(b,fg,bg,red)=>{const a=Math.sin(Math.PI*b.l);if(a<=0)return;
+if(!b.ls){b.hero=!!b.w[2];b.ls=sp2(b.w[0]);x.save();x.font=bf(b,100);const m=Math.max(...b.ls.map(t=>x.measureText(t).width));x.restore();b.s=Math.min(b.hero?76:40,W*.86/m*100);b.mw=m*b.s/100}
+const e=Math.min(1,b.l*7),sc=.9+.1*(1-(1-e)*(1-e)),n=b.ls.length,lh=b.s*1.12,X=Math.max(b.mw/2+8,Math.min(W-b.mw/2-8,b.X));
+x.save();x.globalAlpha=a;x.translate(X,b.Y);x.scale(sc,sc);x.lineJoin='round';x.font=bf(b,Math.round(b.s));x.lineWidth=b.s*.4;x.strokeStyle=bg;x.fillStyle=fg;
+b.ls.forEach((t,i)=>{const y=(i-(n-1)/2)*lh;x.strokeText(t,0,y);x.fillText(t,0,y)});
+const ly=(n-1)/2*lh+b.s*.7,lb=b.w[1].toUpperCase();x.font='500 11px JetBrains Mono,monospace';x.lineWidth=5;x.strokeText(lb,0,ly);x.fillStyle=red;x.fillText(lb,0,ly);x.restore()};
+const spawn=(X,Y)=>{B.push({w:DK.next(),X:X??W*(.3+.4*Math.random()),Y:Y??H*(.22+.28*(SL++%3))+H*.05*Math.random(),l:0,s:Math.max(30,Math.min(70,W*.1))})};
+const draw=()=>{x.clearRect(0,0,W,H);x.textAlign='center';x.textBaseline='middle';
+const fg=css('--fg'),mu=css('--mut'),bg=css('--bg'),red=css('--red');
+x.font=`500 ${f}px JetBrains Mono,Noto Sans,system-ui,sans-serif`;
+const sw=(t*2.4)%(Rw+14)-7;let col='';
+for(let j=0;j<Rw;j++)for(let i=0;i<C;i++){
+const X=i*cw+cw/2,Y=j*ch+ch/2,dx=(X-px)/cw,dy=(Y-py)/ch,d2=px<0?999:dx*dx+dy*dy*1.7;
+const z=(Math.sin(i*.045+t*.35)+Math.sin(j*.09-t*.28+i*.02)+2)/4;
+let v=(Math.sin(i*.11+t)+Math.sin(j*.27-t*.8)+Math.sin((i+j*2)*.06+t*.6)+Math.sin(Math.hypot(i-C/2,(j-Rw/2)*2)*.13-t*1.3)+4)/8+.7*Math.exp(-d2/60);
+if(v<.22)continue;v=Math.min(1,v);
+const s=SC[Math.min(SC.length-1,z*SC.length|0)],h=(i*73+j*151)%997,g=s[(h+Math.floor(t*1.3+h%11/11))%s.length];
+const hot=d2<26||Math.abs(j-sw)<.6,c=hot?red:mu;if(c!==col){x.fillStyle=c;col=c}
+x.globalAlpha=hot?1:.25+.75*v;x.fillText(g,X,Y)}
+for(const b of B){drawB(b,fg,bg,red);continue;x.globalAlpha=a;x.font=`400 ${b.s}px Instrument Serif,Georgia,Noto Serif,serif`;
+const mw=x.measureText(b.w[0]).width,X=Math.max(mw/2+8,Math.min(W-mw/2-8,b.X));
+x.lineJoin='round';x.strokeStyle=bg;x.lineWidth=b.s*.4;x.strokeText(b.w[0],X,b.Y);x.fillStyle=fg;x.fillText(b.w[0],X,b.Y);
+x.font='500 11px JetBrains Mono,monospace';x.lineWidth=5;x.strokeText(b.w[1].toUpperCase(),X,b.Y+b.s*.62);x.fillStyle=red;x.fillText(b.w[1].toUpperCase(),X,b.Y+b.s*.62)}
+x.globalAlpha=1};
+cv.addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();px=e.clientX-r.left;py=e.clientY-r.top});
+cv.addEventListener('pointerleave',()=>px=py=-1);
+cv.addEventListener('pointerdown',e=>{const r=cv.getBoundingClientRect();spawn(e.clientX-r.left,e.clientY-r.top)});
+new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
+let last=0;const loop=T=>{requestAnimationFrame(loop);if(!vis||T-last<33)return;const dt=Math.min(.1,(T-last)/1000);last=T;t+=.035;nx-=dt;if(nx<0&&B.length<3){spawn();nx=1.2+Math.random()*.9}B.forEach(b=>b.l+=dt/4.6);B=B.filter(b=>b.l<1);draw()};
+fit();addEventListener('resize',fit);F.push(fit);if(rm){spawn();B[0].l=.5;draw()}else requestAnimationFrame(loop)}
+scripts($('#c1'));
+/* name decodes through scripts */
+const scr=(sp,d,len)=>setTimeout(()=>{const e0=performance.now(),k=setInterval(()=>{if(performance.now()-e0>len){clearInterval(k);sp.classList.remove('sc');return}sp.dataset.s=sg();sp.classList.add('sc')},60)},d);
+$$('h1 .l span').forEach((sp,i)=>{if(!rm)scr(sp,300+i*90,600+i*60);sp.addEventListener('pointerenter',()=>scr(sp,0,450))});
+/* glyph trail */
+if(!rm){const tr=document.createElement('canvas'),tc=tr.getContext('2d'),d=devicePixelRatio||1;tr.style.cssText='position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:55';document.body.append(tr);let P=[],lx=0,ly=0;
+const rs=()=>{tr.width=innerWidth*d;tr.height=innerHeight*d;tc.setTransform(d,0,0,d,0,0)};rs();addEventListener('resize',rs);
+addEventListener('pointermove',e=>{if(Math.hypot(e.clientX-lx,e.clientY-ly)>28){lx=e.clientX;ly=e.clientY;P.push({x:lx,y:ly,g:sg(),a:1})}},{passive:true});
+(function l(){requestAnimationFrame(l);if(!P.length)return;tc.clearRect(0,0,innerWidth,innerHeight);tc.font='400 26px Instrument Serif,Georgia,Noto Sans,serif';tc.textAlign='center';P=P.filter(p=>(p.a-=.016)>0);tc.fillStyle='#ee3524';P.forEach(p=>{tc.globalAlpha=p.a;tc.fillText(p.g,p.x,p.y-(1-p.a)*26)})})()}
+/* marquee: speed and skew follow scroll velocity */
+const mq=$('#mq');mq.innerHTML=shuf([...HP]).slice(0,12).map(w=>`<span dir="auto">${w[0]}</span><i>/</i>`).join('');mq.innerHTML+=mq.innerHTML;let mx=-Math.random()*mq.scrollWidth/2,lv=0,ly2=scrollY;
+(function m(){requestAnimationFrame(m);const dy=scrollY-ly2;ly2=scrollY;lv+=(dy-lv)*.1;mx-=(rm?0:.7)+Math.abs(lv)*.6;const w=mq.scrollWidth/2;if(-mx>w)mx+=w;mq.style.transform=`translateX(${mx}px) skewX(${Math.max(-12,Math.min(12,-lv))}deg)`})();
+/* page counter */
+const pg=$('#pg'),SEC=['work','about','exp','words','process','contact'].map((i,k)=>[$('#'+i),['Work','About','Experience','Words','Process','Contact'][k]]);
+const pgUp=h=>{let c='Prologue';SEC.forEach(([e,l])=>{if(e.getBoundingClientRect().top<h*.5)c=l});const pr=scrollY/Math.max(1,document.documentElement.scrollHeight-h);pg.textContent='p. '+String(Math.round(pr*239)+1).padStart(3,'0')+' / 240 · '+c};
+/* idea machine, live prompt pill */
+const FM=['a tagline','a short story','a manifesto','a radio ad','a love letter','a one-page script','a poem','a product name','a brand origin story','an opening line','a toast','a villain’s monologue','a museum label','a bedtime story','a headline','a voicemail','a lyric','a poem with a pulse'];
+const SB=['a lighthouse keeper','a city at 4 a.m.','a lost umbrella','the last bookshop','a stranger’s kitchen','an unsent text','the sea at night','a desert library','a small revolution','a robot learning to joke','a borrowed name','the first snow','a night train','a locked drawer','a family recipe','a quiet apology','life as a bridge','a warren at Watership Down','poetic justice','stardust','a pen with a heart','a pen without intelligence','old-school roots and a new-school pulse','Kutsal Yıldız','seven gallows and eleven toes','our names written between the lines of fate','being born again every moment','Geborgenheit'];
+const pick=a=>a[Math.random()*a.length|0];
+{const rr=[0,1,2].map(i=>$('#r'+i)),sd=$('#seed');
+const go=()=>rr.forEach((el,i)=>{el.classList.add('go');const k=setInterval(()=>{el.textContent=i<2?pick(i?SB:FM):DK.next()[0]},70);setTimeout(()=>{clearInterval(k);el.classList.remove('go');if(i<2)el.textContent=pick(i?SB:FM);else{const w=DK.next();el.textContent=w[0];sd.textContent=w[1]}},800+i*500)});
+$('#spin').onclick=go;go()}
+{const el=$('#wd');let k=0;const up=()=>{el.style.opacity=0;setTimeout(()=>{if(k++%2)el.textContent='Try: '+pick(FM)+' about '+pick(SB);else{const w=DK.next();el.textContent=w[0]+' · '+w[1]}el.style.opacity=1},350)};up();if(!rm)setInterval(up,4200)}
+/* letter brush: strokes spell words, then dissolve */
+{const cv=$('#bc'),x=cv.getContext('2d');let W,H,S=[],dn=0,lx=0,ly=0,cur=[...DK.next()[0]],ci=0,vis=true,bt=Math.random()*99,last=0,gx=0,gy=0;
+const fit=()=>{const d=devicePixelRatio||1,r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;x.setTransform(d,0,0,d,0,0)};
+const stamp=(X,Y,a,red)=>{S.push({X,Y,a,g:cur[ci++],s:22+Math.random()*16,l:1,r:red});if(ci>=cur.length){ci=0;cur=[...DK.next()[0]]}if(S.length>700)S.shift()};
+const pos=e=>{const r=cv.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]};
+const draw=()=>{const cs=getComputedStyle(document.documentElement),fg=cs.getPropertyValue('--fg').trim(),red=cs.getPropertyValue('--red').trim();x.clearRect(0,0,W,H);x.textAlign='center';x.textBaseline='middle';for(const p of S){x.save();x.translate(p.X,p.Y);x.rotate(p.a);x.globalAlpha=Math.min(1,p.l*1.6);x.fillStyle=p.r?red:fg;x.font=`400 ${p.s}px Instrument Serif,Georgia,Noto Sans,serif`;x.fillText(p.g,0,0);x.restore()}};
+cv.addEventListener('pointerdown',e=>{dn=1;[lx,ly]=pos(e);cv.setPointerCapture(e.pointerId)});
+cv.addEventListener('pointermove',e=>{if(!dn)return;const[X,Y]=pos(e);if(Math.hypot(X-lx,Y-ly)>20){stamp(X,Y,Math.atan2(Y-ly,X-lx),0);lx=X;ly=Y;if(rm)draw()}});
+['pointerup','pointercancel'].forEach(n=>cv.addEventListener(n,()=>dn=0));
+new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
+const loop=T=>{requestAnimationFrame(loop);if(!vis||T-last<25)return;const dt=Math.min(.1,(T-last)/1000);last=T;bt+=dt;
+if(!dn){const X=W/2+Math.cos(bt*.9)*W*.36,Y=H/2+Math.sin(bt*1.37)*H*.32;if(Math.hypot(X-gx,Y-gy)>18){stamp(X,Y,Math.atan2(Y-gy,X-gx),1);gx=X;gy=Y}}
+S.forEach(p=>p.l-=dt/14);S=S.filter(p=>p.l>0);draw()};
+fit();addEventListener('resize',fit);F.push(fit);if(!rm)requestAnimationFrame(loop)}
+/* word globe (removed) */
+if(false){const cv=$('#gc'),x=cv.getContext('2d'),gm=$('#gm'),ws=DK.pick(42),N=ws.length;let W,H,ay=Math.random()*6,ax=.3,vy=.004,dn=0,lx=0,mv=0,vis=true,PJ=[],last=0;
+const P=ws.map((w,i)=>{const y=1-2*(i+.5)/N,r=Math.sqrt(1-y*y),p=i*2.39996;return{w,x:Math.cos(p)*r,y,z:Math.sin(p)*r}});
+const fit=()=>{const d=devicePixelRatio||1,r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;x.setTransform(d,0,0,d,0,0);draw()};
+const draw=()=>{const cs=getComputedStyle(document.documentElement),fg=cs.getPropertyValue('--fg').trim(),red=cs.getPropertyValue('--red').trim(),R=Math.min(W,H)*.4,ca=Math.cos(ax),sa=Math.sin(ax),c=Math.cos(ay),s=Math.sin(ay);x.clearRect(0,0,W,H);x.textAlign='center';x.textBaseline='middle';
+PJ=P.map(p=>{const X=p.x*c+p.z*s,Z0=-p.x*s+p.z*c,Y=p.y*ca-Z0*sa,Z=p.y*sa+Z0*ca,k=3/(3-Z);return{w:p.w,X:W/2+X*R*k,Y:H/2+Y*R*k,Z}}).sort((a,b)=>a.Z-b.Z);
+for(const p of PJ){x.globalAlpha=.18+.82*(p.Z+1)/2;x.fillStyle=p.Z>.7?red:fg;x.font=`400 ${13+(p.Z+1)*8}px Instrument Serif,Georgia,Noto Serif,serif`;x.fillText(p.w[0],p.X,p.Y)}x.globalAlpha=1};
+cv.addEventListener('pointerdown',e=>{dn=1;lx=e.clientX;mv=0;cv.setPointerCapture(e.pointerId)});
+cv.addEventListener('pointermove',e=>{if(!dn)return;const dx=e.clientX-lx;lx=e.clientX;ay+=dx*.008;vy=dx*.008;mv+=Math.abs(dx);if(rm)draw()});
+cv.addEventListener('pointerup',e=>{dn=0;if(mv<6){const r=cv.getBoundingClientRect(),X=e.clientX-r.left,Y=e.clientY-r.top;let b=null,bd=2500;for(const p of PJ){const d=(p.X-X)**2+(p.Y-Y)**2;if(p.Z>-.4&&d<bd){bd=d;b=p}}if(b)gm.textContent=b.w[0]+' — '+b.w[1]}});
+cv.addEventListener('pointercancel',()=>dn=0);
+new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
+const loop=T=>{requestAnimationFrame(loop);if(!vis||T-last<25)return;last=T;if(!dn){ay+=vy;vy+=(.004-vy)*.02}draw()};
+fit();addEventListener('resize',fit);F.push(fit);if(!rm)requestAnimationFrame(loop)}
+/* script to screen: a bilingual screenplay that types itself */
+{const el=$('#scr'),tc=$('#tc'),sl=$('#slate'),sn=$('#sn'),tk=$('#tk2'),sc=$('#sc'),vf=$('#vf');
+const SN=[
+[['h','INT. المجلس — LATE NIGHT'],['a','Cardamom smoke. A pen waits.'],['n','THE STORYTELLER'],['d','وش السالفة اللي ما انقالت؟'],['n','MARYAM'],['d','The one I haven’t written yet.']],
+[['h','EXT. الساحل — DAWN'],['a','A boat. Divers’ voices fade into a drumbeat.'],['n','THE NAHHAM'],['d','الفكرة لؤلؤة تبي لها غوص'],['n','MARYAM'],['d','Then I’ll dive.']],
+[['h','INT. EDIT SUITE — DAY'],['a','A wall of frames. One is circled in red.'],['n','MARYAM'],['d','Cut the scene. Keep the silence.'],['n','DIRECTOR'],['d','قطع! نعيد المشهد']],
+[['h','EXT. ROOFTOP — GOLDEN HOUR'],['a','The city leans in to listen.'],['n','MARYAM'],['d','اكتب كأن العالم يصغي'],['a','CUT TO BLACK.']]];
+const sleep=ms=>new Promise(r=>setTimeout(r,ms)),z=n=>String(n).padStart(2,'0'),t0=performance.now();let vis=false;
+new IntersectionObserver(e=>vis=e[0].isIntersecting,{threshold:.25}).observe(vf);
+setInterval(()=>{if(!vis)return;const f=Math.floor((performance.now()-t0)/41.667),s=Math.floor(f/24);tc.textContent=`${z(Math.floor(s/3600))}:${z(Math.floor(s/60)%60)}:${z(s%60)}:${z(f%24)}`},42);
+if(rm){SN[0].forEach(([c,t])=>{const p=document.createElement('p');p.className=c;p.dir='auto';p.textContent=t;el.append(p)})}
+else(async()=>{let i=Math.random()*SN.length|0,take=1;for(;;){while(!vis)await sleep(300);sn.textContent=i+1;tk.textContent='TAKE '+take;sc.textContent='SC '+(i+1);sl.classList.add('on');await sleep(1250);el.innerHTML='';sl.classList.remove('on');await sleep(350);
+for(const[c,t]of SN[i]){const p=document.createElement('p');p.className=c;p.dir='auto';el.append(p);const d=c==='a'||c==='h'?22:38;for(const ch of t){p.textContent+=ch;await sleep(d)}await sleep(c==='n'?150:550)}
+await sleep(2300);i=(i+1)%SN.length;take++}})()}
+/* word tunnel: scroll flies the camera through the phrases, other scripts stream past as stars */
+{const tn=$('#tn'),cv=$('#tc3'),x=cv.getContext('2d'),cap=$('#tcap'),NS=NT.filter(p=>p[0].length<45),ph=shuf([...NS,...shuf(HP.filter(p=>!NT.includes(p))).slice(0,24-NS.length)]),DZ=1.15,L=ph.length*DZ+3;
+const Q=ph.map((p,i)=>({t:p[0],a:i*2.39996,r:.35+.65*((i*37%10)/10),z:1.3+i*DZ,ar:/[\u0600-\u06FF]/.test(p[0]),red:i%5==2,f:Math.min(1,10/p[0].length)}));
+const G=[...Array(110)].map(()=>({t:sg(),a:Math.random()*6.283,r:.2+Math.random()*1.1,z:Math.random()*L}));
+let W,H,cam=0,vis=false,px=.5,py=.5,last='';
+const fit=()=>{const d=devicePixelRatio||1,r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;x.setTransform(d,0,0,d,0,0)};
+new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(tn);
+tn.addEventListener('pointermove',e=>{px=e.clientX/innerWidth;py=e.clientY/innerHeight});
+const draw=()=>{const r=tn.getBoundingClientRect(),p=Math.max(0,Math.min(1,-r.top/(r.height-innerHeight))),tg=p*(ph.length*DZ-.5);cam+=(tg-cam)*.12;
+x.fillStyle='#000';x.fillRect(0,0,W,H);x.textAlign='center';x.textBaseline='middle';
+const Rx=W*.36,Ry=H*.3,cx=W/2+(px-.5)*50,cy=H/2+(py-.5)*40,fs=Math.min(50,W*.13),rot=cam*.28+(px-.5)*.5,V=[];
+for(const q of Q)V.push({q,zz:q.z-cam});for(const g of G)V.push({g,zz:((g.z-cam)%L+L)%L});
+V.filter(v=>v.zz>.45&&v.zz<9).sort((a,b)=>b.zz-a.zz).forEach(({q,g,zz})=>{const o=q||g,k=2/zz,X=cx+Math.cos(o.a+rot)*o.r*Rx*k,Y=cy+Math.sin(o.a+rot)*o.r*Ry*k;x.globalAlpha=Math.min(1,(9-zz)/3,(zz-.45)/.6);
+if(q){x.font=q.ar?`700 ${Math.round(fs*q.f*1.15*k)}px Amiri,serif`:`400 ${Math.round(fs*q.f*k)}px Instrument Serif,Georgia,serif`;x.fillStyle=q.red?'#ee3524':'#fff';x.fillText(q.t,X,Y)}
+else{x.font=`500 ${Math.round(16*k)}px JetBrains Mono,Noto Sans,sans-serif`;x.fillStyle='#8a8a8a';x.fillText(g.t,X,Y)}});
+x.globalAlpha=1;const c=p>.9?'Your idea is next — say hello':'Scroll to fly through the words';if(c!==last){cap.textContent=c;last=c}};
+const loop=()=>{requestAnimationFrame(loop);if(vis)draw()};
+fit();addEventListener('resize',fit);F.push(fit);requestAnimationFrame(loop)}
+/* dark / bright mode toggle */
+{const tb=$('#theme'),de=document.documentElement,lb=()=>{tb.textContent=de.getAttribute('data-theme')==='dark'?'Bright':'Dark'};lb();
+tb.addEventListener('click',()=>{const t=de.getAttribute('data-theme')==='dark'?'light':'dark';de.setAttribute('data-theme',t);try{localStorage.setItem('theme',t)}catch(e){}lb()})}
+/* typewriter */
+const tw=$('#tw'),T=['a debut novel about the sea','a founder’s origin story','twelve small essays on time','a voice for a brand-new studio'];
+if(rm)tw.textContent=T[0];else{let a=0,b=0,d=1;(function k(){const z=T[a];b+=d;tw.textContent=z.slice(0,b);let w=d>0?65:28;if(b===z.length&&d>0){d=-1;w=1800}else if(b===0){d=1;a=(a+1)%T.length;w=400}setTimeout(k,w)})()}
+/* kind words */
+const Q=$$('.qs blockquote');let q=0;Q[0].classList.add('on');if(!rm)setInterval(()=>{Q[q].classList.remove('on');q=(q+1)%Q.length;Q[q].classList.add('on')},5200);
+/* scroll: process line draws, strip drifts */
+const st=$('#steps'),sp=$('#strip');let tk=0;
+const sc=()=>{tk=0;const h=innerHeight;pgUp(h);let r=st.getBoundingClientRect();st.style.setProperty('--p',Math.max(0,Math.min(1,(h*.65-r.top)/r.height)));r=sp.parentElement.getBoundingClientRect();if(!rm)sp.style.transform=`translateX(${Math.min(0,(r.top-h)*.5)+innerWidth*.15}px)`};
+addEventListener('scroll',()=>{if(!tk)tk=requestAnimationFrame(sc)},{passive:true});sc();
+})();
+</script>
+</body>
+</html>
